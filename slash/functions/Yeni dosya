@@ -1,0 +1,19 @@
+const { Interaction, Client, MessageEmbed,CommandInteraction} = require("discord.js");
+
+module.exports = {
+    name: 'interactionCreate',
+    
+    async execute(interaction, client) {
+        client.on("guildCreate", (g) => {
+
+            const i = client.commands.get(interaction.guild.id)
+            console.log(i)
+           
+        });
+        
+
+    },
+    
+
+
+};
